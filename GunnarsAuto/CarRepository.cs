@@ -5,15 +5,14 @@ using System.Text;
 
 namespace GunnarsAuto
 {
-    class CarRepository
-    {
-      
-
+     public class CarRepository
+     {
+        static List<Car> cars = new List<Car>();
 
         private const string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=GunnarsAutoDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-        public List<Car> GetAll()
+        
+        public static List<Car> GetAll()
         {
-            List<Car> cars = new List<Car>();
             string sql = "SELECT * FROM Cars";
 
             SqlConnection connection = new SqlConnection(connectionString);
@@ -28,7 +27,6 @@ namespace GunnarsAuto
                 string registration = (string)reader["RegistrationsNumber"];
                 string isUsed = (string)reader["IsUsed"];
 
-
                 Car car = new Car
                 {
                     Make = make,
@@ -39,7 +37,6 @@ namespace GunnarsAuto
                 };
                 cars.Add(car);
             }
-
 
             connection.Close();
             return cars;

@@ -20,9 +20,24 @@ namespace GunnarsAuto
     /// </summary>
     public partial class MainWindow: Window
     {
+    
+
         public MainWindow()
-        {
+        { 
             InitializeComponent();
+
+            start();
+            
+        }
+
+        private void start()
+        {
+          CarRepository.GetAll();
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
