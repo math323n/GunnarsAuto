@@ -26,7 +26,22 @@ namespace GunnarsAuto
                 string model = (string)reader["Model"];
                 string vin = (string)reader["VIN_number"];
                 string registration = (string)reader["RegistrationsNumber"];
+                string isUsed = (string)reader["IsUsed"];
+
+
+                Car car = new Car
+                {
+                    Make = make,
+                    Model = model,
+                    VIN_number = vin,
+                    RegistrationNumber = registration,
+                    IsUsed = isUsed
+                };
+                cars.Add(car);
             }
+
+
+            connection.Close();
             return cars;
         }
     }
