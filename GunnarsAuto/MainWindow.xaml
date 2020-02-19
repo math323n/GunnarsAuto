@@ -8,6 +8,7 @@
         Title="MainWindow" Height="450" Width="800"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized">
+   
     <Grid Background="LightGray">
         <!-- GRID coloumn & Rows-->
         <Grid.ColumnDefinitions>
@@ -75,13 +76,13 @@
                 <ImageBrush ImageSource="\img\road.png" />
             </Rectangle.Fill>
         </Rectangle>
+        
         <!-- Combo Box -->
-        <StackPanel Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="5">
-            <TextBlock>navn</TextBlock>
-            <ComboBox x:Name="LoginSeller" 
-                      ItemsSource="{Binding SalesPerson}"
-                      SelectedItem="{Binding SelectedSalesPerson}"></ComboBox>
-        </StackPanel>
+        <ComboBox x:Name="LoginSeller"
+                  ItemsSource="{Binding sellersList}"> 
+            
+        </ComboBox>
+      
         
        
         

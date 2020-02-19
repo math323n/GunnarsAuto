@@ -66,6 +66,7 @@ namespace GunnarsAuto
             Initials = initials;
         }
 
+        public string FullName => FirstName + LastName;
 
     }
 }

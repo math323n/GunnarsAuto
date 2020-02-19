@@ -28,9 +28,11 @@ namespace GunnarsAuto
             InitializeComponent();
             viewModel = new ViewModel();
             DataContext = viewModel;
-
+            Repository.GetAllSellers();
             //database.ItemsSource = Repository.GetAllSellers();
             //LoginSeller.ItemsSource = Repository.GetAllSellers();
+            
+           
         }
 
        
