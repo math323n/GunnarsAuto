@@ -6,10 +6,23 @@ namespace GunnarsAuto
 {
     public class SalesPerson
     {
+        private int id;
         private string firstName;
         private string lastName;
         private string initials;
 
+
+        public int Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+            }
+        }
         public string FirstName
         {
             get
@@ -45,8 +58,9 @@ namespace GunnarsAuto
 
         }
 
-        public SalesPerson(string firstName, string lastName, string initials)
+        public SalesPerson(int id, string firstName, string lastName, string initials)
         {
+            Id = id;
             FirstName = firstName;
             LastName = lastName;
             Initials = initials;

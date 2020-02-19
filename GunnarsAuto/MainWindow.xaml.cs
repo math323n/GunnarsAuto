@@ -28,7 +28,7 @@ namespace GunnarsAuto
             InitializeComponent();
 
             
-            CarTableDataGrid.ItemsSource = Repository.GetAllSellers();
+            //database.ItemsSource = Repository.GetAllSellers();
         }
 
        

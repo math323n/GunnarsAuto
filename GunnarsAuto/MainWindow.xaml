@@ -6,31 +6,59 @@
         xmlns:local="clr-namespace:GunnarsAuto"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="LightGray">
+        <!-- GRID coloumn & Rows-->
         <Grid.ColumnDefinitions>
-            
-            <ColumnDefinition Width="800" />
-            
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25*" />
-            <RowDefinition Height="75*" />
-            <RowDefinition Height="25*" />
-            
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition  />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
         </Grid.RowDefinitions>
-        <Viewbox Grid.Column="1"
-                 Grid.Row="1">
-            <DataGrid  x:Name="CarTableDataGrid"
-                      MinHeight="500" ColumnWidth="250" RowHeight="75"
-                       HeadersVisibility="None"
-                       Background="Bisque"
-                       RowBackground="LightSeaGreen"
-                       AlternatingRowBackground="MintCream"
-                       BorderBrush="Gray"
-                       BorderThickness="5"
-                       FontSize="20"></DataGrid>
-           
+       <!-- Stylings -->
+        
+        
+        <!-- Window Contents-->
+        
+        <!-- Logo-->
+        <Viewbox Grid.Column="2"
+                 Grid.ColumnSpan="3"
+                 Grid.RowSpan="1">
+            <TextBlock Text="Gunnars Auto"
+                       FontSize="16"
+                       HorizontalAlignment="Center"
+                       FontFamily="Adobe Caslon Pro"
+                       VerticalAlignment="Center"
+                       FontWeight="Bold"
+                       FontStyle="Italic"
+                       Foreground="#FFD4192E">
+                <TextBlock.TextDecorations>
+                    <TextDecoration />
+                </TextBlock.TextDecorations>
+            </TextBlock>
         </Viewbox>
+        
+        <!-- Logo SUV-->
+            <Rectangle Grid.Column="5">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="C:\Users\math323n\source\repos\GunnarsAuto\GunnarsAuto\img\suv.png" />
+                </Rectangle.Fill>
+            </Rectangle>
         
         
        

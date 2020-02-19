@@ -47,12 +47,13 @@ namespace GunnarsAuto
             SqlDataReader reader = command.ExecuteReader();
 
             while(reader.Read())
-            {            
+            {
+                int id = (int)reader["PK_SalesPersonID"];
                 string firstName = (string)reader["FirstName"];
                 string lastName = (string)reader["LastName"];
                 string initials = (string)reader["Initials"];
 
-                SalesPerson salesPerson = new SalesPerson(firstName, lastName, initials);
+                SalesPerson salesPerson = new SalesPerson(id, firstName, lastName, initials);
                 sellers.Add(salesPerson);
             }
             connection.Close();
