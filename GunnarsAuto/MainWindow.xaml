@@ -7,10 +7,32 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid  x:Name="CarTableDataGrid"
-                   Margin="234,52,234,165"></DataGrid>
-        <Button x:Name="SaveButton" Click="SaveButton_Click"
-                Margin="336,320,336,68"></Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="600" />
+            <ColumnDefinition Width="25*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="75*" />
+            <RowDefinition Height="25*" />
+            
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Column="1"
+                 Grid.Row="1">
+            <DataGrid  x:Name="CarTableDataGrid"
+                      MinHeight="500" ColumnWidth="150" RowHeight="75"
+                       HeadersVisibility="None"
+                       Background="Aquamarine"
+                       RowBackground="Honeydew"
+                       AlternatingRowBackground="MintCream"
+                       BorderBrush="Gray"
+                       BorderThickness="5"
+                       FontSize="20"></DataGrid>
+           
+        </Viewbox>
+        
+        
        
         
     </Grid>
