@@ -8,9 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="600" />
-            <ColumnDefinition Width="25*" />
+            
+            <ColumnDefinition Width="800" />
+            
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="25*" />
@@ -21,10 +21,10 @@
         <Viewbox Grid.Column="1"
                  Grid.Row="1">
             <DataGrid  x:Name="CarTableDataGrid"
-                      MinHeight="500" ColumnWidth="150" RowHeight="75"
+                      MinHeight="500" ColumnWidth="250" RowHeight="75"
                        HeadersVisibility="None"
-                       Background="Aquamarine"
-                       RowBackground="Honeydew"
+                       Background="Bisque"
+                       RowBackground="LightSeaGreen"
                        AlternatingRowBackground="MintCream"
                        BorderBrush="Gray"
                        BorderThickness="5"
