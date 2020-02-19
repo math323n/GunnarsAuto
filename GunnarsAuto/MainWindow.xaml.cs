@@ -20,15 +20,17 @@ namespace GunnarsAuto
     /// </summary>
     public partial class MainWindow: Window
     {
-
+        private ViewModel viewModel;
         public static Repository cars;
 
         public MainWindow()
         { 
             InitializeComponent();
+            viewModel = new ViewModel();
+            DataContext = viewModel;
 
-            
             //database.ItemsSource = Repository.GetAllSellers();
+            //LoginSeller.ItemsSource = Repository.GetAllSellers();
         }
 
        
