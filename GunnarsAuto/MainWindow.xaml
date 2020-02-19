@@ -56,10 +56,14 @@
         <!-- Logo SUV-->
             <Rectangle Grid.Column="5">
                 <Rectangle.Fill>
-                    <ImageBrush ImageSource="C:\Users\math323n\source\repos\GunnarsAuto\GunnarsAuto\img\suv.png" />
+                    <ImageBrush ImageSource="\img\suv.png" />
                 </Rectangle.Fill>
             </Rectangle>
-        
+        <Rectangle Grid.ColumnSpan="9" Panel.ZIndex="-1 " >
+            <Rectangle.Fill>
+                <SolidColorBrush Color="DarkGray"/>
+            </Rectangle.Fill>
+        </Rectangle>
         
        
         
