@@ -79,12 +79,17 @@
         
         <!-- Combo Box -->
         <StackPanel Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <Viewbox>
             <TextBlock Text="Vælg en bruger" HorizontalAlignment="Center" FontSize="28"
                        FontFamily="Lucida Console" 
                        Margin="10"/>
+            </Viewbox>
+
             <ComboBox x:Name="loginSeller"
-                      FontSize="20"
-                      SelectionChanged="SalesPersonSelectionChanged" 
+                      FontSize="24"
+                      VerticalContentAlignment="Center"
+                      HorizontalContentAlignment="center"
+                      SelectionChanged="SalesPersonSelectionChanged"
                       DisplayMemberPath="FirstName"
                       Height="50"
                       IsReadOnly="True">
