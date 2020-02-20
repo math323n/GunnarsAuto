@@ -30,12 +30,16 @@ namespace GunnarsAuto
             DataContext = viewModel;
             Repository.GetAllSellers();
             //database.ItemsSource = Repository.GetAllSellers();
-            //LoginSeller.ItemsSource = Repository.GetAllSellers();
+           loginSeller.ItemsSource = Repository.GetAllSellers();
             
            
         }
+        public void SalesPersonSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            SalesPerson salesPerson = loginSeller.SelectedItem as SalesPerson;
+            viewModel.SelectedSalesPerson = salesPerson;
+        }
 
-       
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {

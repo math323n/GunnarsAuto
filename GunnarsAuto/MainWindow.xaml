@@ -78,13 +78,25 @@
         </Rectangle>
         
         <!-- Combo Box -->
-        <ComboBox x:Name="LoginSeller"
-                  ItemsSource="{Binding sellersList}"> 
+        <StackPanel Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2">
+            <TextBlock Text="Vælg en bruger"/>
+            <ComboBox x:Name="loginSeller"
+                    
+                      FontSize="16"
+                      SelectionChanged="SalesPersonSelectionChanged"
+                      ItemsSource="{Binding SalesPerson}"
+                      SelectedItem="{Binding SelectedSalesPerson}"
+                      DisplayMemberPath="FirstName"
+                    Height="50"
+                      IsReadOnly="True">
+                
+                
+            </ComboBox>
             
-        </ComboBox>
-      
-        
-       
-        
+        </StackPanel>
+
+
+
+
     </Grid>
 </Window>
