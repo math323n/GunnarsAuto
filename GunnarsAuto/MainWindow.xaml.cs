@@ -22,13 +22,14 @@ namespace GunnarsAuto
     {
         private ViewModel viewModel;
         public static Repository cars;
+        public static Repository sellers;
 
         public MainWindow()
         { 
             InitializeComponent();
             viewModel = new ViewModel();
             DataContext = viewModel;
-            Repository.GetAllSellers();
+            //Repository.GetAllSellers();
             //database.ItemsSource = Repository.GetAllSellers();
            loginSeller.ItemsSource = Repository.GetAllSellers();
             

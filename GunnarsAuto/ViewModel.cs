@@ -13,7 +13,7 @@ namespace GunnarsAuto
         public ViewModel()
         {
             repository = new Repository();
-            List<SalesPerson> sellersList = Repository.GetAllSellers();
+           // List<SalesPerson> sellersList = Repository.GetAllSellers();
             SalesPersons = new ObservableCollection<SalesPerson>(sellersList);
         }
 
