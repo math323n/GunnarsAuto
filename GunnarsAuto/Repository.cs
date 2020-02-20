@@ -8,7 +8,7 @@ namespace GunnarsAuto
     public class Repository
     {
         public static List<Car> cars = new List<Car>();
-        public static List<SalesPerson> sellers = new List<SalesPerson>();
+        public static List<SalesPerson> salesPersons = new List<SalesPerson>();
         private const string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=GunnarsAutoDB;Integrated Security=True";
 
         public static List<Car> GetAllVehicles()
@@ -54,10 +54,10 @@ namespace GunnarsAuto
                 string initials = (string)reader["Initials"];
 
                 SalesPerson salesPerson = new SalesPerson(id, firstName, lastName, initials);
-                sellers.Add(salesPerson);
+                salesPersons.Add(salesPerson);
             }
             connection.Close();
-            return sellers;
+            return salesPersons;
         }
       
     }

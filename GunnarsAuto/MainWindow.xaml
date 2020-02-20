@@ -77,29 +77,39 @@
             </Rectangle.Fill>
         </Rectangle>
         
-        <!-- Combo Box -->
+        <!-- #Region Combo Box -->
         <StackPanel Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2">
             <Viewbox>
-            <TextBlock Text="Vælg en bruger" HorizontalAlignment="Center" FontSize="28"
+            <TextBlock x:Name="chooseUserText" Text="Vælg en bruger" HorizontalAlignment="Center" FontSize="28"
                        FontFamily="Lucida Console" 
                        Margin="10"/>
             </Viewbox>
-
-            <ComboBox x:Name="loginSeller"
-                      FontSize="24"
-                      VerticalContentAlignment="Center"
-                      HorizontalContentAlignment="center"
-                      SelectionChanged="SalesPersonSelectionChanged"
-                      DisplayMemberPath="FirstName"
-                      Height="50"
-                      IsReadOnly="True">
-            </ComboBox>
-            
-
         </StackPanel>
 
-
-
-
+        <DockPanel Grid.Column="3"
+                   Grid.Row="3"
+                   Grid.ColumnSpan="3"
+                   Grid.RowSpan="1">
+            <ComboBox x:Name="loginSeller"
+                      FontSize="24"
+                      ItemsSource="{Binding SalesPersons}"
+                      SelectedItem="{Binding SelectedSalesPersons}"
+                      SelectionChanged="SalesPersonSelectionChanged"
+                      HorizontalContentAlignment="center"
+                      VerticalContentAlignment="Center"             
+                   
+                      DisplayMemberPath="FirstName"
+                      IsReadOnly="True">
+            </ComboBox>
+        </DockPanel>
+        <Button x:Name="loginButton"
+                Grid.Column="3"
+                Grid.ColumnSpan="3"
+                Grid.RowSpan="1"
+                Grid.Row="6"
+                Background="#FF345ED4"
+                Content="{Binding viewModel.SelectedItem.FullName}"
+                Click="loginButton_Click" />
+        <!--#Endregion-->
     </Grid>
 </Window>

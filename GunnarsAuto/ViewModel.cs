@@ -8,13 +8,13 @@ namespace GunnarsAuto
     public class ViewModel
     {
         private Repository repository;
-        public static List<SalesPerson> sellersList = new List<SalesPerson>();
+       
 
         public ViewModel()
         {
             repository = new Repository();
-           // List<SalesPerson> sellersList = Repository.GetAllSellers();
-            SalesPersons = new ObservableCollection<SalesPerson>(sellersList);
+          List<SalesPerson> salesPersons = Repository.GetAllSellers();
+            SalesPersons = new ObservableCollection<SalesPerson>(salesPersons);
         }
 
         public ObservableCollection<SalesPerson> SalesPersons { get; set; }
