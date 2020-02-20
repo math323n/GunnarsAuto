@@ -64,7 +64,7 @@
             </Rectangle>
         <Rectangle Grid.ColumnSpan="9" Panel.ZIndex="-1 " >
             <Rectangle.Fill>
-                <SolidColorBrush Color="DarkGray"/>
+                <SolidColorBrush Color="DarkGray" />
             </Rectangle.Fill>
         </Rectangle>
         <!-- Road -->
@@ -79,20 +79,20 @@
         
         <!-- Combo Box -->
         <StackPanel Grid.Column="3" Grid.Row="2" Grid.ColumnSpan="3" Grid.RowSpan="2">
-            <TextBlock Text="Vælg en bruger"/>
+            <TextBlock Text="Vælg en bruger" HorizontalAlignment="Center" FontSize="28"
+                       FontFamily="Lucida Console" 
+                       Margin="10"/>
             <ComboBox x:Name="loginSeller"
-                    
-                      FontSize="16"
+                      FontSize="20"
                       SelectionChanged="SalesPersonSelectionChanged"
                       ItemsSource="{Binding SalesPerson}"
                       SelectedItem="{Binding SelectedSalesPerson}"
                       DisplayMemberPath="FirstName"
-                    Height="50"
+                      Height="50"
                       IsReadOnly="True">
-                
-                
             </ComboBox>
             
+
         </StackPanel>
 
 
